@@ -113,12 +113,22 @@ export default function Home() {
               Data Analyst | SQL | Python | Power BI | Excel
             </motion.p>
 
+            {/* Desktop Only Description */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="hidden md:block mt-12 max-w-[600px] text-gray-300 text-sm md:text-[16px] leading-relaxed font-light"
+            >
+              Data Analyst passionate about working with data and uncovering meaningful insights. Currently building projects using SQL, Python, Power BI, and Excel. Interested in data visualization, reporting, and business analytics. Always learning new skills and exploring real-world datasets. Seeking opportunities to grow and contribute as a Data Analyst.
+            </motion.p>
+
             {/* HERO BUTTONS */}
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.8 }}
-              className="flex flex-row items-center justify-center md:justify-start gap-4 sm:gap-8 md:gap-16 mt-10 md:mt-32">
+              className="flex flex-row items-center justify-center md:justify-start gap-4 sm:gap-8 md:gap-16 mt-10 md:mt-20">
               <motion.a
                 whileHover={{ scale: 1.05, boxShadow: "0px 0px 20px rgba(59,130,246,0.5)" }}
                 whileTap={{ scale: 0.95 }}

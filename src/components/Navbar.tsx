@@ -20,8 +20,28 @@ export function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
+
+      // Scroll spy logic to update active link
+      const isBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+      if (isBottom) {
+        setActive(navItems[navItems.length - 1].name);
+        return;
+      }
+
+      const reversedNavItems = [...navItems].reverse();
+      for (const item of reversedNavItems) {
+        const el = document.getElementById(item.href.substring(1));
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= 250) {
+            setActive(item.name);
+            break;
+          }
+        }
+      }
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Set initial active section
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
