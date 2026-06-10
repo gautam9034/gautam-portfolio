@@ -55,10 +55,12 @@ export function Navbar() {
   return (
     <>
       <header
-        className="fixed top-0 w-full z-50 transition-all duration-300 backdrop-blur-[12px] border-b"
+        className={`fixed top-0 w-full z-50 transition-all duration-300 border-b ${
+          scrolled ? "backdrop-blur-[12px]" : "backdrop-blur-none"
+        }`}
         style={{
-          backgroundColor: "rgba(8, 15, 35, 0.85)",
-          borderBottomColor: "rgba(0, 174, 255, 0.15)",
+          backgroundColor: scrolled ? "rgba(8, 15, 35, 0.85)" : "transparent",
+          borderBottomColor: scrolled ? "rgba(0, 174, 255, 0.15)" : "transparent",
         }}
       >
         <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between md:justify-center">
