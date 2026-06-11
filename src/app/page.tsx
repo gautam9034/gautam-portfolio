@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import mainImg from "../../main photo port.png";
+import mainImg from "../../gy photo .jpeg";
 import sqlLogo from "../../sql-new-logo.png";
 import pythonLogo from "../../python logo.png";
 import powerbiLogo from "../../power_bi-removebg-preview.png";
