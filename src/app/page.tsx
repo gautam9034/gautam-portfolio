@@ -143,7 +143,7 @@ export default function Home() {
               <motion.a 
                 whileHover={{ scale: 1.05, backgroundColor: "rgba(59,130,246,0.1)" }}
                 whileTap={{ scale: 0.95 }}
-                href="#" className="bg-transparent border-2 border-[#3b82f6] text-[#3b82f6] font-semibold text-sm md:text-lg px-5 md:px-8 py-3 md:py-3.5 rounded-xl transition-colors duration-300 flex items-center justify-center min-w-[130px] md:min-w-[200px]">
+                href="/api/download-cv" download="Gautam_Yadav_CV.pdf" className="bg-transparent border-2 border-[#3b82f6] text-[#3b82f6] font-semibold text-sm md:text-lg px-5 md:px-8 py-3 md:py-3.5 rounded-xl transition-colors duration-300 flex items-center justify-center min-w-[130px] md:min-w-[200px]">
                 Download CV
               </motion.a>
             </motion.div>
